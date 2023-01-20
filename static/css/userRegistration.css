@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.registration-form .registration-head {
+    color: #5bb318;
+    position: relative;
+}
+
+.registration-form .registration-head div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    height: 100%;
+    border-left: 3px solid #5bb318;
+}
+
+.registration-form .registration-head h4 {
+    font-size: 2rem;
+    margin-left: 2%;
+    margin-bottom: 5%;
+}
+
+.registration-form input {
+    border: none;
+    border-bottom: 2px solid #5bb318;
+    width: 100%;
+    margin: 2% 0;
+    padding: 5px 2px;
+}
+
+.registration-form input:active,
+.registration-form input:focus {
+    outline: none;
+}
+
+.registration-form .adress-inputs {
+    width: 100%;
+}
+
+.upload-icon {
+    width: 36%;
+    margin: auto;
+    padding: 5% 0;
+    border: 2px solid #5bb318;
+}
+
+.upload-pic-contianer,
+.upload-pic-btn {
+    text-align: center;
+}
+
+.upload-pic-contianer {
+    margin-top: 5%;
+}
+
+.upload-pic-btn {
+    margin: 2rem;
+}
+
+.upload-pic-btn button {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #5bb318;
+    background: transparent;
+    color: #5bb318;
+    border-radius: 20px;
+}
+
+.register-btn {
+    width: 100%;
+    margin: 2% auto;
+    border: none;
+    background-color: #5bb318;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+@media (max-width: 920px) {
+    .registration-form .registration-head h4 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 535px) {
+    .registration-form .registration-head h4 {
+        font-size: 1.5rem;
+        margin-left: 4%;
+    }
+
+    .upload-pic-btn button {
+        font-size: 0.7rem;
+        width: 60%;
+        padding: 10px 15px;
+    }
+}

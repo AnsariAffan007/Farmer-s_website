@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: inline;
+}
+
+.market-nav {
+    margin: 1% 2%;
+}
+
+.flex-container {
+    margin: 2%;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images-btns {
+    max-width: 50%;
+    width: 50%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-img {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.main-img img {
+    width: 100%;
+    max-height: 400px;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.images img {
+    width: 10%;
+    margin: 0 5%;
+}
+
+.bid-cart-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-to-cart-btn,
+.bid-now-btn {
+    width: 47%;
+    height: 2rem;
+    border-radius: 20px;
+}
+
+.add-to-cart-btn {
+    background: transparent;
+    color: #5bb318;
+    border: 2px solid #5bb318;
+}
+
+.bid-now-btn {
+    border: none;
+    background-color: #5bb318;
+    color: white;
+}
+
+.details {
+    padding: 2%;
+    color: #5bb318;
+    width: 50%;
+}
+
+.product-description {
+    margin: 10px 0 5%;
+    font-size: 0.8rem;
+    border: 1px solid #5bb318;
+    padding: 10px;
+    box-shadow: 0 3px 5px 0 rgb(0 0 0 / 10%);
+}
+
+.bid-numbers,
+.category-type,
+.start-price,
+.latest-bid,
+.state {
+    margin: 5px 0;
+}
+
+.bid-numbers,
+.category-type,
+.start-price,
+.latest-bid,
+.state {
+    position: relative;
+    /* border-bottom: 1px solid #5bb318; */
+}
+
+.bid-numbers span,
+.category-type span,
+.start-price span,
+.latest-bid span,
+.state span {
+    position: absolute;
+    left: 50%;
+}
+
+.bidding-table {
+    background-color: #F0FF42;
+    margin: 5% 0;
+    text-align: center;
+    padding: 2%;
+    box-shadow: 0 3px 20px 0 rgb(0 0 0 / 10%);
+}
+
+.bidding-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+
+.bidding-table table tr td {
+    padding: 5px 0;
+}
+
+.bidding-table table td:nth-child(1) {
+    text-align: left;
+}
+
+.bidding-table table td:nth-child(2) {
+    text-align: right;
+}
+
+@media (max-width: 1275px) {}
+
+@media (max-width: 1080px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .images-btns {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .details {
+        width: 100%;
+    }
+}
+
+@media (max-width: 920px) {
+    .market-nav {
+        margin: 2%;
+    }
+
+    .sort-head h5 {
+        font-size: 1rem;
+    }
+
+    .product-name-head {
+        font-size: 1.2rem;
+    }
+
+    .seller span {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 535px) {
+
+    .market-nav {
+        margin: 4%;
+    }
+
+    .sort-head {
+        margin: 2% 4%;
+    }
+
+    .flex-container {
+        margin: 5% 2%;
+    }
+
+    .details {
+        margin-top: 2%;
+    }
+
+    .latest-bid,
+    .state,
+    .bid-numbers,
+    .category-type,
+    .start-price {
+        font-size: 0.8rem;
+    }
+
+    .bidding-table h5 {
+        font-size: 1rem;
+    }
+
+    .bidding-table table {
+        font-size: 0.8rem;
+    }
+
+    .bid-cart-btn {
+        flex-direction: column;
+    }
+
+    .add-to-cart-btn,
+    .bid-now-btn {
+        font-size: 0.8rem;
+        margin: 1% 0;
+        width: 100%;
+        height: 1.5rem;
+    }
+}

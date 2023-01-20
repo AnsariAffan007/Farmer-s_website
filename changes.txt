@@ -1,0 +1,5 @@
+category in product page and product card
+
+product type in FRUIT is apple , banana, watermelon and al
+product type in VEGETABLE is palak and all
+product type in CROP is sugarcane , rice , wheat , jowar etc

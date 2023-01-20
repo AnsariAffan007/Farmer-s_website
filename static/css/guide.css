@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: block;
+}
+
+.market-nav {
+    display: flex;
+    align-items: center;
+}
+
+.responsive-nav {
+    margin: 0 2% 2%;
+    display: none;
+}
+
+.toggle-nav-icon {
+    display: none;
+}
+
+.tools-container {
+    margin: 0 2% 2%;
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+}
+
+.tool-card {
+    margin: 0.4rem;
+    background-color: #efefef;
+    width: 18vw;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.175);
+    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 10%);
+}
+
+.tool-card img {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.tool-name {
+    /* margin-top: 1vw; */
+    font-size: 1.2rem;
+    padding: 10px 10px 0;
+}
+
+.tool-desc {
+    font-size: 0.9rem;
+    padding: 10px;
+}
+
+.tool-desc a {
+    color: #5bb318;
+}
+
+.tool-card button {
+    margin: 10px;
+    border: none;
+    background-color: #5bb318;
+    color: white;
+    padding: 2px 0;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.tool-card button:hover {
+    background: transparent;
+    /* This is actually Border */
+    box-shadow: 0px 0px 0px 1px #5bb318;
+    color: #5bb318;
+}
+
+@media (max-width: 1275px) {
+    .tool-name {
+        font-size: 1rem;
+    }
+
+    .tool-desc,
+    .tool-desc a {
+        font-size: 0.8rem;
+    }
+
+    .tool-card button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 920px) {
+    .tool-name {
+        font-size: 0.8rem;
+    }
+
+    .tool-desc,
+    .tool-desc a {
+        font-size: 0.6rem;
+    }
+
+    .tool-card button {
+        font-size: 0.8rem;
+        padding: 1px 0;
+    }
+}
+
+@media (max-width: 535px) {
+    .responsive-nav {
+        margin: 0 4% 4%;
+    }
+
+    .tools-container {
+        justify-content: center;
+    }
+}

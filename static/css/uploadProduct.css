@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.upload-product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-product-details span {
+    font-size: 1rem;
+}
+
+.product-category-input select,
+.product-type-input select {
+    /* border: none;
+    border-bottom: 1px solid #5bb318; */
+    font-size: 1rem;
+    color: #5bb318;
+
+}
+
+.product-category-input select option:hover,
+.product-type-input select option:hover {
+    background-color: #5bb318;
+    color: white;
+}
+
+.fruit-types,
+.vegetable-types,
+.crop-types {
+    display: none;
+}
+
+.upload-product-details div {
+    margin: 1rem 0;
+    position: relative;
+}
+
+.upload-product-details div select,
+.upload-product-details div input {
+    width: 40%;
+    padding: 2px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    border-bottom: 1px solid #5bb318;
+    font-size: 0.9rem;
+}
+
+.upload-product-details div select:focus,
+.upload-product-details div input:focus {
+    outline: none;
+    box-shadow: 0 8px 6px -6px rgb(0 0 0 / 10%);
+}
+
+.prod-description-input {
+    height: 75px;
+}
+
+.prod-description-input textarea {
+    width: 40%;
+    height: 67px;
+    z-index: 2;
+    resize: none;
+    padding: 3px;
+    font-size: 0.8rem;
+    position: absolute;
+    right: 1px;
+    top: 0;
+}
+
+.prod-description-input textarea:focus {
+    outline: none;
+    box-shadow: 0 3px 20px 0 rgb(0 0 0 / 10%);
+}
+
+.images-btns span {
+    align-self: center;
+    color: #5bb318;
+    letter-spacing: 2px;
+}
+
+.upload-pic-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-pic-btn button {
+    width: 50%;
+    margin: 0.5rem 0;
+}
+
+.images-btns>button {
+    align-self: center;
+    width: 50%;
+    border: none;
+    background-color: #5bb318;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+@media (max-width: 1080px) {
+    .images-btns span {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 920px) {
+    .upload-pic-btn {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .upload-pic-btn button {
+        width: 100%;
+    }
+
+    .images-btns>button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 535px) {
+    .upload-product-details span {
+        font-size: 0.8rem;
+    }
+
+    .upload-product-details div select,
+    .upload-product-details div input {
+        font-size: 0.8rem;
+    }
+}

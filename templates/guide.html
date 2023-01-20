@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/market.css">
+    <link rel="stylesheet" href="/static/css/guide.css">
+</head>
+
+<body>
+    <div id="top" class="upper-portion">
+        <div class="logo">
+            <a href="index.html"><img src="/static/images/KisaanBuddyLogo.png" alt=""></a>
+        </div>
+
+        <div class="upper-links-ul">
+            <ul>
+                <li><a class="upper-links" href="">About</a></li>
+                <li><a class="upper-links" href="#contact">Contact</a></li>
+
+                <!-- If logged Out -->
+                <!-- <li><a class="upper-links" href="login.html">Sign in</a></li> -->
+
+                <!-- If logged In -->
+                <li class="dropdown">
+                    <a class="drop-link upper-links">Username<i class="fa-solid fa-angle-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">Profile</a>
+                        <a href="productDashboard.html">Product Dashboard</a>
+                        <a href="uploadProduct.html">Upload a Product</a>
+                        <hr>
+                        <a href="#">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="change-lang">
+            <a class="upper-links language" href="">English</a>
+        </div>
+    </div>
+
+    <div class="market-nav">
+        <h3>Farming Tools</h3>
+        <div class="search">
+            <form action="" class="search-product">
+                <span class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input class="search-input" type="text" placeholder="Search">
+            </form>
+        </div>
+        <div class="toggle-nav-icon"><i class="fa-solid fa-bars"></i></div>
+    </div>
+
+    <div class="responsive-nav">
+        <form action="" class="search-product">
+            <span class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input class="search-input" type="text" placeholder="Search">
+        </form>
+    </div>
+
+    <hr class="sort-head-separator">
+
+    <div class="tools-container">
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/spade.jpg" alt="">
+            <span class="tool-name">Spade</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/plough.jpg" alt="">
+            <span class="tool-name">Plough</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/harrow.jpg" alt="">
+            <span class="tool-name">Harrow</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/roller.jpg" alt="">
+            <span class="tool-name">Roller</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/cultivator.jpg" alt="">
+            <span class="tool-name">Cultivator</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/billhook.jpg" alt="">
+            <span class="tool-name">Billhook</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/secateurs.jpg" alt="">
+            <span class="tool-name">Secateurs</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/Grass-shear.jpg" alt="">
+            <span class="tool-name">Grass%20shear</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/hedge-trimmer.jpeg" alt="">
+            <span class="tool-name">Hedge%20Trimmer</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/rake.jpg" alt="">
+            <span class="tool-name">Rake</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/khurpa.jpg" alt="">
+            <span class="tool-name">Khurpa</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/sprayer.jpg" alt="">
+            <span class="tool-name">Sprayer</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/watering-can.jpg" alt="">
+            <span class="tool-name">Watering%20Can</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/saw.jpg" alt="">
+            <span class="tool-name">Saw</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/wheelbarrow.jpg" alt="">
+            <span class="tool-name">Wheelbarrow</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/hand-cultivator.jpg" alt="">
+            <span class="tool-name">Hand%20Cultivator</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/hori-hori.jpg" alt="">
+            <span class="tool-name">Hori%20hori</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/grafting-knife.jpg" alt="">
+            <span class="tool-name">Grafting%20Knife</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/budding-knife.jpg" alt="">
+            <span class="tool-name">Budding%20Knife</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+        <div class="tool-card">
+            <img src="/static/images/FarmingTools/garden-fork.jpg" alt="">
+            <span class="tool-name">Garden%20Fork</span>
+            <span class="tool-desc"></span>
+            <button onclick="getToolData(this);">Study</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="/index.js"></script>
+    <script src="/farmingTools.js"></script>
+
+    <script>
+        var windowWidth = $(window).width();
+
+        $(window).resize(function () {
+            toggleNavbar();
+        })
+
+        function toggleNavbar() {
+            windowWidth = $(window).width();
+            if (width < 920) {
+                $(".toggle-nav-icon").css("display", "inline-block");
+                $(".search").css("display", "none");
+            }
+            else {
+                $(".toggle-nav-icon").css("display", "none");
+                $(".search").css("display", "inline-block");
+            }
+        }
+        toggleNavbar();
+
+        let navbarToggled = false;
+        $(".toggle-nav-icon").click(function () {
+            if (navbarToggled) {
+                $(".responsive-nav").css("display", "none");
+                navbarToggled = false;
+            }
+            else {
+                $(".responsive-nav").css("display", "block");
+                navbarToggled = true;
+            }
+        })
+
+        // Assign toolName as Value to button and setting description with read more link
+        $(".tool-card").each(function (index, card) {
+            // Loop through Each .tool-card
+            let toolName = $(this).find(".tool-name")[0].innerHTML;
+            if(toolName.includes('%20')) {
+                $(this).find(".tool-name")[0].innerHTML = toolName.replace(/%20/g, ' ');
+            }
+            $(this).find("button").attr("value", toolName);
+
+            // Find the tool document from the array and set the description, anchor tag
+            toolsData.forEach(function (element) {
+                if (element.name === toolName) {
+                    $(card).find(".tool-desc")[0].innerHTML = element.description.substring(0, 150) + `<a href="farmingTool.html?name=` + toolName + `">    Read More</a>`;
+                }
+            })
+        })
+
+        function getToolData(button) {
+            toolName = $(button).attr("value");
+            location.href = "farmingTool.html?name=" + toolName;
+        }
+
+        // Search Tool
+        let searchInput = $(".search-input");
+        searchInput.on("input", function (e) {
+            let searchInputVal = e.target.value.toLowerCase();
+            $(".tool-card").each(function (index, card) {
+                let toolName = $(this).find(".tool-name")[0].innerHTML.toLowerCase();
+                if (toolName.includes(searchInputVal)) {
+                    $(this).css("display", "flex");
+                }
+                else {
+                    $(this).css("display", "none");
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>

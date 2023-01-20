@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.tool-information {
+    margin: 0 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    color: #5bb318;
+    letter-spacing: 3px;
+}
+
+.image {
+    width: 25%;
+    border: 1px solid #5bb318;
+    margin: 2% 0;
+    align-self: center;
+}
+
+.tool-information .sort-head-separator {
+    margin: 1% 0;
+}
+
+.desc {
+    line-height: 30px;  
+}
+
+@media (max-width: 920px) {
+    .image {
+        width: 50%;
+    }
+
+    .desc {
+        font-size: 0.9rem;  
+    }
+}
+
+@media (max-width: 535px) {
+    .tool-information {
+        margin: 0 4%;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .desc {
+        font-size: 0.8rem;  
+    }
+
+}

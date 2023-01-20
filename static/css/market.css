@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0px;
+}
+
+.upper-portion {
+    grid-column: 1 / 3;
+}
+
+#sidebar {
+    display: inline-block;
+    width: 16vw;
+    background-color: #F0FF42;
+    padding: 3rem 1.5rem;
+    border-right: 1px solid #5bb318;
+    z-index: 1;
+    transition: 0.3s;
+    /* position: fixed;
+    left: -16vw; */
+}
+
+.close-sidebar-btn {
+    text-align: right;
+    color: green;
+    display: none;
+    font-size: 1.5rem;
+}
+
+/* .main-content {
+    width: 100vw;
+} */
+
+.filter-head {
+    font-size: 1.2rem;
+}
+
+.price-sort,
+.category-sort,
+.type-sort {
+    color: #5bb318;
+    margin-bottom: 20px;
+}
+
+.category-sort select {
+    font-size: 0.75rem;
+    border: 2px solid #5bb318;
+    background-color: #F0FF42;
+    width: 100%;
+}
+
+.category-sort select:active,
+.category-sort select:focus {
+    outline: none;
+}
+
+.fruit-type-sort,
+.vegetable-type-sort,
+.crop-type-sort {
+    color: #5bb318;
+    display: none;
+}
+
+label {
+    margin-left: 0.6rem;
+    font-size: 0.75rem;
+}
+
+
+/* Navigation Bar */
+.market-nav {
+    display: flex;
+    margin: 2% 2%;
+    color: #5bb318;
+    align-items: center;
+    justify-content: space-between;
+    /* height: 100px; */
+    position: relative;
+}
+
+.market-nav h3 {
+    margin: 0;
+    display: inline-block;
+}
+
+.search-product {
+    /* position: relative; */
+    display: flex;
+}
+
+.search-icon {
+    text-align: center;
+    background-color: #5bb318;
+    color: #fff;
+    width: 30px;
+    padding-top: 4px;
+}
+
+.search-product i {
+    /* background-color: #5bb318;
+    color: #fff; */
+    /* position: absolute;
+    top: 5px;
+    left: 5px; */
+    transform: rotate(90deg);
+    line-height: 0%;
+}
+
+.search-product input {
+    padding: 2px;
+    padding-left: 5px;
+    width: 100%;
+    color: #5bb318;
+    /* border: none; */
+    border: 2px solid #5bb318;
+}
+
+.search-product input:active,
+.search-product input:focus {
+    outline: none;
+}
+
+.cart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #5bb318;
+    background: transparent;
+    padding: 3px;
+    border: 2px solid #5bb318;
+}
+
+
+/* Sort */
+.main-sort {
+    color: #5bb318;
+    background-color: #F0FF42;
+    padding: 5px 2%;
+    position: relative;
+}
+
+/* .main-sort h5 {
+    margin: 0;
+    display: inline-block;
+    margin-right: 3rem;
+} */
+
+.main-sort a:nth-child(1) {
+    margin-left: 0;
+}
+
+.main-sort a {
+    margin: 0 2%;
+    padding-bottom: 5px;
+    color: #5bb318;
+    text-decoration: none;
+}
+
+.main-sort a:hover {
+    cursor: pointer;
+}
+
+.active-main-sort {
+    border-bottom: 3px solid #5bb318;
+}
+
+.toggle-sidebar-btn {
+    font-size: 0.7rem;
+    padding: 3px 5px;
+    background: transparent;
+    border: 1px solid #5bb318;
+    color: #5bb318;
+    position: absolute;
+    right: 5%;
+    display: none;
+}
+
+.toggle-sidebar-btn i {
+    margin-left: 10px;
+}
+
+/* Sort type head */
+.sort-head {
+    margin: 2% calc(2% + 5px);
+    /* max-width: 80vw; */
+    color: #5bb318;
+    position: relative;
+}
+
+.vertical-line {
+    display: inline-block;
+    height: 1.2rem;
+    border: none;
+    border-left: 3px solid #5bb318;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+}
+
+.sort-head h5 {
+    display: inline-block;
+    margin: 0;
+    margin-left: 1rem;
+}
+
+/* Separator after the sort head */
+.sort-head-separator {
+    /* max-width: 80vw; */
+    margin: 2% 2%;
+    border: none;
+    border-bottom: 3px solid #5bb318;
+}
+
+/* Product Card Div and Cards */
+.products {
+    margin: 1% 2%;
+    /* width: 80vw; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: 15vw;
+    min-width: 150px;
+    background-color: #F0FF42;
+    margin: 0.4rem 0.2rem;
+    /* color: #5bb318; */
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%); */
+}
+
+.product-card:hover {
+    box-shadow: 0 10px 10px 0 rgb(0 0 0 / 10%);
+}
+
+.product-card img {
+    width: 100%;
+    margin: 20px 0;
+    align-self: center;
+}
+
+.price,
+.seller-name,
+.category,
+.date-of-upload,
+.verification-status {
+    font-size: 0.7rem;
+}
+
+.bid-btn {
+    background-color: #5bb318;
+    color: #F0FF42;
+    height: 25px;
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    transition: 0.2s;
+    align-self: center;
+}
+
+.bid-btn:hover {
+    background: transparent;
+    color: #5bb318;
+    border: 2px solid #5bb318;
+}
+
+@media (max-width: 1275px) {
+
+    .toggle-sidebar-btn {
+        display: inline-block;
+    }
+
+    .close-sidebar-btn {
+        display: block;
+    }
+
+    #sidebar {
+        position: fixed;
+        width: 20vw;
+        min-height: 100vh;
+    }
+
+    .main-sort a {
+        font-size: 0.8rem;
+    }
+
+    /* In Product Card */
+    .bid-btn {
+        height: 20px;
+    }
+
+    .main-content {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 920px) {
+    #sidebar {
+        width: 35vw;
+    }
+
+    .market-nav h3 {
+        font-size: 1.4rem;
+    }
+
+    .sell-btn,
+    .cart {
+        padding: 2px;
+        font-size: 0.8rem;
+    }
+
+    .products {
+        justify-content: flex-start;
+    }
+
+    .product-card {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+
+    .seller-name,
+    .category,
+    .date-of-upload,
+    .verification-status {
+        font-size: 0.6rem;
+    }
+
+    .bid-btn {
+        height: 20px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 535px) {
+    #sidebar {
+        width: 55vw;
+    }
+
+    .market-nav {
+        margin: 4%;
+    }
+
+    .market-nav h3 {
+        font-size: 1.2rem;
+    }
+
+    .sell-btn,
+    .cart {
+        padding: 1px;
+    }
+
+    #sidebar {
+        padding: 3rem 1rem;
+    }
+
+    .sort-head h5 {
+        margin-left: 0.7rem;
+    }
+
+    .main-sort a {
+        font-size: 0.6rem;
+    }
+
+    .sort-head-separator {
+        margin: 4%;
+    }
+
+    .products {
+        margin: 0 2%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .product-card {
+        font-size: 0.7rem;
+    }
+
+    .bid-btn {
+        background-color: #5bb318;
+        color: #F0FF42;
+        font-size: 0.6rem;
+        height: 17px;
+    }
+}

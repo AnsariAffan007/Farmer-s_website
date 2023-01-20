@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bid-numbers,
+.category-type,
+.start-price,
+.latest-bid,
+.state {
+    margin: 15px 0;
+}
+
+.bidding-table {
+    margin: 2%;
+}
+
+.bidding-table table tr:first-child {
+    border-bottom: 1px solid #5bb318;
+}
+
+.bidding-table table td:nth-child(1) {
+    text-align: center;
+}
+
+.bidding-table table td:nth-child(2) {
+    text-align: center;
+}

@@ -1,0 +1,505 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", "sans-serif";
+    font-weight: 500;
+}
+
+.upper-portion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5bb318;
+    height: 6vh;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 2%;
+}
+
+.logo img {
+    height: 6vh;
+}
+
+.upper-portion ul {
+    display: flex;
+    list-style: none;
+    min-height: 100%;
+    /* position: absolute;
+    right: 8%;
+    top: 9.5px; */
+    padding: 0;
+    margin: 0;
+}
+
+.upper-links {
+    position: relative;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    margin: 0 1.5vw;
+}
+
+.upper-links.language {
+    margin: 0;
+}
+
+.change-lang {
+    position: absolute;
+    right: 2%;
+    height: 6vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upper-links::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -4px;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.upper-links:hover::after {
+    width: 100%;
+}
+
+.upper-links:hover {
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    height: 15.2px;
+}
+
+.drop-link:hover {
+    cursor: pointer;
+}
+
+.drop-link i {
+    margin-left: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 1.5vw;
+    top: 27px;
+    background-color: #f1f1f1;
+    width: fit-content;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.dropdown-content a {
+    font-size: 0.8rem;
+    width: 148px;
+    color: black;
+    padding: 8px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-content hr {
+    margin: 0;
+}
+
+/* Main Navigation Bar */
+.main-navbar {
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.main-heading {
+    margin: 0 2%;
+}
+
+.main-head {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: #5bb318;
+}
+
+.head-desc {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+    color: #5bb318;
+}
+
+.nav-links {
+    margin-left: auto;
+    margin-right: 2%;
+    padding-top: 16px;
+}
+
+.nav-links ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.nav-links ul li {
+    margin: 0 30px;
+}
+
+.nav-links ul li:nth-child(5) {
+    margin-right: 0;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    position: relative;
+    font-size: 1.2rem;
+    color: #5bb318;
+}
+
+.nav-links ul li a::after {
+    content: "";
+    position: absolute;
+    background-color: #5bb318;
+    height: 4px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+.nav-toggler-btn {
+    border: none;
+    color: #5bb318;
+    position: absolute;
+    right: 2%;
+    background: transparent;
+    display: none;
+}
+
+.nav-toggler-btn:hover {
+    cursor: pointer;
+}
+
+.toggled-nav {
+    background-color: #5bb318;
+    color: white;
+    overflow: hidden;
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+    z-index: 1;
+    height: 0;
+    transition: 0.3s;
+}
+
+.toggled-nav ul {
+    /* text-align: right; */
+    list-style: none;
+    padding: 2%;
+}
+
+.toggled-nav ul li {
+    margin: 0.5rem 0;
+}
+
+.toggled-nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.toggled-nav ul li a:hover {
+    letter-spacing: 2px;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    border: none;
+    font-size: 2em;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #2B7A0B;
+    color: white;
+    border-radius: 100%;
+    z-index: 1;
+    transition: background-color .5s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#back-to-top:hover {
+    cursor: pointer;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Lander */
+.lander {
+    height: 84vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/landers/lander-3.png");
+    /* background: url("images/lander.png"); */
+    background-repeat: no-repeat;
+    background-size: 100vw 84vh;
+    /* opacity: 0.5; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-quote {
+    /* margin-top: 170px; */
+    font-weight: 500;
+    color: #5bb318;
+    font-size: 4rem;
+}
+
+.get-started-btn {
+    position: relative;
+    margin-top: 20px;
+    height: 3.7rem;
+    /* width: 18vw; */
+    padding: 5px 10px;
+    background: transparent;
+    border: 2px solid #5bb318;
+    color: #5bb318;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.get-started-btn:hover {
+    /* font-size: 1.7rem;
+    letter-spacing: 5px; */
+    color: white;
+}
+
+.get-started-btn::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 101%;
+    width: 0;
+    top: 0;
+    left: 0;
+    background-color: #5bb318;
+    transition: 0.3s;
+}
+
+.get-started-btn:hover::after {
+    width: 100%;
+}
+
+/* Documentation */
+.workflow {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+}
+
+.guide-workflow h2,
+.weather-workflow h2,
+.schemes-workflow h2 {
+    color: #5bb318;
+}
+
+.market-workflow,
+.disease-pred-workflow {
+    flex-direction: row-reverse;
+    background-color: #5bb318;
+    color: white;
+}
+
+.doc-content {
+    margin: 5rem 2%;
+}
+
+.workflow-img {
+    height: 200px;
+    width: 200px;
+    margin: 50px 100px 0;
+}
+
+.go-btn {
+    text-align: center;
+    border: none;
+    width: 5rem;
+    background-color: #5bb318;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.go-btn::after {
+    content: "\f061";
+    font-family: FontAwesome;
+    position: absolute;
+    right: -20px;
+    /* margin-left: 10px; */
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.go-btn:hover {
+    padding-right: 25px;
+}
+
+.go-btn:hover::after {
+    opacity: 1;
+    right: 10px;
+}
+
+.market-workflow .go-btn,
+.disease-pred-workflow .go-btn {
+    background-color: white;
+    color: #5bb318;
+    font-weight: 500;
+}
+
+/* Footer */
+#contact {
+    height: 25vh;
+    background-color: #5bb318;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.contactNo,
+.email {
+    margin-bottom: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.email:hover {
+    letter-spacing: 1px;
+    color: white;
+    cursor: pointer;
+}
+
+.icons a {
+    color: white;
+}
+
+.icons a:hover {
+    color: #2B7A0B;
+    cursor: pointer;
+}
+
+.first-icon {
+    margin-right: 10px;
+}
+
+.middle-icon {
+    margin: 0 10px;
+}
+
+.last-icon {
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 1240px) {
+    .upper-portion ul {
+        right: auto;
+    }
+
+    .upper-links {
+        font-size: 0.8rem;
+    }
+
+    .main-head {
+        font-size: 1.6rem;
+    }
+
+    .head-desc {
+        font-size: 0.8rem;
+    }
+
+    .nav-links ul li a {
+        font-size: 1rem;
+    }
+
+    .landing-quote {
+        font-size: 3.5rem;
+    }
+
+    .get-started-btn {
+        height: 3.5rem;
+        /* width: 18vw; */
+    }
+
+    .workflow {
+        flex-direction: column;
+        height: fit-content;
+    }
+}
+
+@media screen and (max-height: 600px) {
+
+    .get-started-btn {
+
+        margin-top: 2rem;
+    }
+
+}
+
+@media screen and (max-height: 550px) {
+
+    .upper-portion ul {
+        top: 4px;
+    }
+}
+
+@media screen and (max-width: 1084px) {
+
+    /* Toggle Navbar */
+    .landing-quote {
+        /* margin-top: 7rem; */
+        font-weight: 500;
+        color: #5bb318;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+
+}
