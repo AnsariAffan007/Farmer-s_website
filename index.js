@@ -44,8 +44,9 @@ $(".drop-link").click(function() {
 })
 
 $(".nav-toggler-btn").click(function () {
+    var togglerHeight = $('.toggled-nav-ul').outerHeight();
     if ($(".toggled-nav").height() === 0) {
-        $(".toggled-nav").css("height", "180px");
+        $(".toggled-nav").css("height", togglerHeight + 'px');
     }
     else {
         $(".toggled-nav").height(0);
